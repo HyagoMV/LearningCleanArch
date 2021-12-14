@@ -1,0 +1,28 @@
+Clean Architecture
+    > Padrão de Arquitetura de Software
+    > Como deve ser a estutura do Software
+    > Arquitetura baseada em Camadas
+    > Objetivos
+        > Independência de Framework
+        > Independência de UI
+            > O ambiente de execução do Software não deve interferir no seu funcionamento
+        > Independência de BD
+        > Independência de Agentes Externos
+            > Bibliotecas de terceiros
+            > API de terceiross
+        > Código Testáveis
+    > As 4 Camadas
+        > Pode ser mais do que 4 Camadas
+        > No mínimo 4 Camadas para alcançar o isolamento do Mundo Exterior
+        > 1 - Camada de Enterprise Business Rules | Camada de Donínio
+            > Regras de Negócio da Empresa que o Software deve implementar
+            > As classes nessa camada devem depender de abstrações
+            > Nessa camada deve ser declaras as abstrações que se pode depender
+        > 2 - Camada de Application Business Rules | Camada de Aplicação
+            > Lógica do Software
+                > Use Cases
+                > Repositories
+            > As classes nessa camada devem depender de abstrações
+        > 3 - Camada de Interface Adapters | Camada de Infraestrutura
+            > As classes nessa camada devem implementam as abstrações contidas 
+                nas camadas 1 e 2
