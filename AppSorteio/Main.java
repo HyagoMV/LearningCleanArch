@@ -1,4 +1,5 @@
 import adapters.ParticipanteRepositorioCSV;
+import adapters.ParticipanteRepositorioInMemory;
 import application.GeradorSorteio;
 
 public class Main {

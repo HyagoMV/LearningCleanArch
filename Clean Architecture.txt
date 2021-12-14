@@ -1,0 +1,47 @@
+Clean Architecture
+    > Padrão de Arquitetura de Software
+    > Como deve ser a estutura do Software
+    > Arquitetura baseada em Camadas
+    > Não define uma estrutura de pasta padrão
+        > A estrutura de pasta é de escolho do dev
+    > Objetivos
+        > Independência de Framework
+        > Independência de UI
+            > O ambiente de execução do Software não deve interferir no seu funcionamento
+        > Independência de BD
+        > Independência de Agentes Externos
+            > Bibliotecas de terceiros
+            > API de terceiross
+        > Código Testáveis
+    > As 4 Camadas
+        > Pode ser mais do que 4 Camadas
+        > No mínimo 4 Camadas para alcançar o isolamento do Mundo Exterior
+      > 1 - Camada de Enterprise Business Rules | CAMADA DE DOMÍNIO (DDD) (Impl.)
+          > Regras de Negócio da Empresa que o Software deve implementar
+          > As classes desta camada só podem dependem de abstrações contidas nessa camada
+          > Essa camada terá todas abstrações usadas por classe nessa camada
+      > 2 - Camada de Application Business Rules | CAMADA DE APLICAÇÃO (DDD) (Impl.)
+          > Lógica do Software
+              > Use Cases
+                > Desing Pattern: Command Handler
+                    > Command: 
+                        > Responsável pelo dados
+                    > Handler: 
+                        > Responsável pela lógica
+                > Desing Pattern: Service
+              > Repositories
+          > As classes desta camada podem dependem de abstrações c ontidas nessa camada
+            e podem dependem de classes da camada 1
+          > Essa camada terá todas abstrações usadas por classe nessa camada
+      > 3 - Camada de Interface Adapters | CAMADA DE INFRAESTRUTURA (DDD) (Impl.)
+          > As classes nessa camada devem implementam as abstrações contidas 
+              nas camadas 1 e 2
+          > Camada que implentara a comunicação do Software com o Mundo Exterior
+      > 4 - Camada de Framework & Driver
+        > Configuração necessárias para o Software e o Mundo Exterior se comunicarem
+            > Dependências 
+                > Driver JDBC
+                > Bibliotecas X, Y, Z
+    > Regra das Dependência
+        > "a DEPENDÊNCIA deve ser de FORA para DETRO"
+        > A camada de fora pode depender de classe da camada de dentro
