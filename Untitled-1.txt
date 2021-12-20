@@ -1,0 +1,4 @@
+Clean Architecture
+    > Arquitetura idealizada por Robert C. Martin (“Uncle Bob”)
+    > Aumentam a produtividade dos desenvolvedores ao 
+        longo da vida dos sistemas de software.

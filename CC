@@ -1,0 +1,109 @@
+1 - Entidades
+  > Dados de Negócio
+  > Regras de Negócio
+
+2 - Caso de Uso
+  > Operações do Sistema
+  > fUNCIONALIDADES DO SITEMA
+    > oPERAM SOBRE AS ENTIDADES
+  :: Service Pattern
+
+3 - Adaptadores de Interface
+  > Controllers 
+    > Web
+    > UI/Divice
+  > Presenters
+    > 
+  > Gateways ? Repositories
+    > BD
+
+
+Loja
+    1 - Camada de Dominio
+        > Prudutos
+        > Pedidos
+        > Usuários
+        > Carrinho
+        > Lógica do Negócio aplicadas a essas Entidades
+    2 - Camada de Aplicação
+        > Cenário: Adicionar ao Carrinho
+        > Cenário: Criar um Pedidos
+        > O cenário descreve a ações que devem ser executadas
+            > Ações que podem interagir com o Mundo Exterior
+        > Interfaces para comunicação com o Mundo Exterior
+    3 - Camada de Adaptadores
+        > Adaptadores são usados para adequar Mundo Exterior ao Mundo Interno
+            > Implementação das interfaces
+    
+
+
+
+Livros
+  Clean Code
+  Clean Architecture
+  DDD
+  SOLID
+
+
+Cenário: Sistema de Cadastro de Usuários
+  > Regra de Negócio:
+    > O nome do usuário deve está entre 20 a 80 caracteres
+      > O nome deve está em Capitalized Case
+    > A senha do usuário deve ter mais que 5 caracteres
+      > A senha deve conter:
+        > Pelo menos uma letra maiúcula
+        > Pelo menos uma letra minúscula
+        > Pelo menos uma número
+  > Regra da Aplicaição:
+    > O sistema deve receber o nome e a senha do usuário,
+      > validar o nome e a senha de acordo com a regra do negócio,
+        > CASO VÁLIDAS: 
+          > Cadatre não haja usuário cadastrio um novo
+        > CASO INVÁLIDO:
+          > Informe que os dados recebebidos são inválidos
+
+Casos de Usos
+  > Persistem Dados
+  > Manda email
+  > Processa pagamento
+  > Interagem com API
+
+Adaptadores 
+  > fazem a conversao de um Mundo para o outro
+
+Devices
+  > Hardware: Leitor do Código de Barras | Camera
+Web
+  > Protocolo: HTTP
+DB
+  > OR, NoSQL
+UI
+  > CLI, Desktop, Web
+External Interfaces
+  > Tecnologia de Terceiros
+
+O núcleo do sistema conversa com as interfaces para alçar o mundo exterior
+
+Gateway de Pagamento
+  Pague-Seguro
+  Paaypal
+
+As Entidades de Domibioo devem implementar suas regras para alcaçar a sua integridade como objeto de negócio
+Entidades nap usam ORM  
+
+
+DDD
+  "Serviço de Domínio"
+
+
+Site:
+  softwareengineering.stackexchange
+
+
+Enviar Email e SMS
+
+a ausência de mocks é um bom sinal para o baixo acoplamento.
+
+Interactors sçao como são chamados os casos de usos na CA
+
+protegendo nosso código de negócios dos detalhes externos

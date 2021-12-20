@@ -4,8 +4,9 @@
 1. **Entity** Layer - Baixa probabilidade de mudança
 2. **Use Case** Layer
 3. **Interface Adapters** Layer
-4. **Frameworks/Driver/Libs** Layer - Alto probabilidade de mudança
-
+4. **Frameworks/Driver/Libs** Layer - Alto probabilidade de mudança - Mundo Externo
+    > I/O do App
+        > Acessar o BD, FS, Rede
 
 * Domain Layer
 * Application Layer

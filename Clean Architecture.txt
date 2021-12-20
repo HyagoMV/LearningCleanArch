@@ -8,11 +8,18 @@ Clean Architecture
         > Independência de Framework
         > Independência de UI
             > O ambiente de execução do Software não deve interferir no seu funcionamento
+                > Web
+                > CLI
+            > Regras de Negócio não dem esta na UI
         > Independência de BD
+            > O Software não deve depender de caracteristicas singular do BD usado
+            > o BD pode ser trocado sem alterar a camada 1 e 2
         > Independência de Agentes Externos
             > Bibliotecas de terceiros
             > API de terceiross
         > Código Testáveis
+            > O código deve ser testável sem depemder do mundo externo
+        > Diminuir o acoplamento
     > As 4 Camadas
         > Pode ser mais do que 4 Camadas
         > No mínimo 4 Camadas para alcançar o isolamento do Mundo Exterior
@@ -20,6 +27,7 @@ Clean Architecture
           > Regras de Negócio da Empresa que o Software deve implementar
           > As classes desta camada só podem dependem de abstrações contidas nessa camada
           > Essa camada terá todas abstrações usadas por classe nessa camada
+          > Atores que realiam as regas do negocio
       > 2 - Camada de Application Business Rules | CAMADA DE APLICAÇÃO (DDD) (Impl.)
           > Lógica do Software
               > Use Cases
@@ -30,13 +38,16 @@ Clean Architecture
                         > Responsável pela lógica
                 > Desing Pattern: Service
               > Repositories
+              > Objetos de Service
           > As classes desta camada podem dependem de abstrações c ontidas nessa camada
             e podem dependem de classes da camada 1
           > Essa camada terá todas abstrações usadas por classe nessa camada
+          > Onde o Software tabalha para empresa 
       > 3 - Camada de Interface Adapters | CAMADA DE INFRAESTRUTURA (DDD) (Impl.)
-          > As classes nessa camada devem implementam as abstrações contidas 
+          > As classes nessa camada devem implementam as abstrações contidas
               nas camadas 1 e 2
           > Camada que implentara a comunicação do Software com o Mundo Exterior
+          > Faz a comunicação do Mundo Interno com o Mundo Exterior
       > 4 - Camada de Framework & Driver
         > Configuração necessárias para o Software e o Mundo Exterior se comunicarem
             > Dependências 
